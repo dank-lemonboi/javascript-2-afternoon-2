@@ -98,8 +98,16 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
 
+divider = (numbersArray) => [numbersArray.filter(item => {return item % 2 === 0}), numbersArray.filter(item => {return item % 2 !== 0})]
+//   for(let i = 0; i < numbersArray.length; i++) {
+//     if(numbersArrray[i] % 2 === 0){
+//       newArray[0].push(numbersArray[i]);
+//     }
+//     newArray[1].push(numbersArray[i]);
+//   }
+//   return newArray;
+// }
 
 
 ////////// PROBLEM 7 //////////
@@ -119,7 +127,18 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
+
+finder = (numbers) => {
+  let isTrue = false;
+  let x = getRandomArbitrary();
+  for(let i = 0; i < numbers.length; i++){
+    if (numbers[i] === x){
+      isTrue = true;
+    } 
+  } 
+  return isTrue;
+}
+
 
 
 
@@ -146,8 +165,25 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 */
 
-//Code Here
+removeItem = (myGroceryList, item) => {
+  for(let i = 0; i < myGroceryList.length; i++) {
+    if (!item) {
+      return [];
+    } else if (item === myGroceryList[i]){
+      myGroceryList.splice(i,1);
+    }
+  }
+  return myGroceryList;
+}
 
+addItem = (myGroceryList, item) => {
+    if(!item) {
+      return [];
+    } else {
+      myGroceryList.push(item)
+    }
+    return myGroceryList;
+  }
 
 
 ////////// PROBLEM 9 //////////
@@ -156,8 +192,14 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
 
+maker = () => {
+  let arr = [];
+  for(let i = 1; i <= 215; i++){
+    arr.push(i);
+  }
+  return arr;
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -172,7 +214,10 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
+addTen = (numbers) => {
+  var newArray = numbers.map(num => Number(num) + 10);
+  return newArray;
+}
 
 
 
@@ -197,7 +242,9 @@ for(var i = 0; i < num2; i++){
   Return the array which is longest.
 */
 
-//Code Here
+longer = (arr1, arr2) => {
+  return arr1 > arr2 ? arr1 : arr2;
+}
 
 
 
@@ -209,8 +256,17 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
-
+both  = (arr1, arr2) => {
+  var newArray = [];
+  for(let i = 0; i < arr1.length; i++){
+    for(let j = 0; j < arr2.length; j++) {
+      if(arr1[i] === arr2[j]) {
+        newArray.push(arr1[i]);
+      }
+    }
+  }
+  return newArray;
+}
 
 
 ////////// PROBLEM 12 //////////
