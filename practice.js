@@ -305,8 +305,8 @@ var colt = {
   After that console.log the length of the Array and make sure that it's equal to 4. 
 */
 
-//Code Here
-
+devMountainEmployees.push(tyler, cahlan, ryan, colt);
+console.log(devMountainEmployees.length);
 
 
 /*
@@ -314,8 +314,15 @@ var colt = {
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
 
-//Code Here
+for( let i = 0; i < devMountainEmployees.length; i++){
+  if(devMountainEmployees[i] === cahlan){
+  devMountainEmployees.splice(i,1)
+ }
+}
 
+
+
+// devMountainEmployees.filter((employee)=> {return employee !== cahlan})
 
 
 ////////// PROBLEM 13 //////////
@@ -326,8 +333,7 @@ var colt = {
   Create an empty array called users.
 */
 
-//Code Here
-
+var users = [];
 
 
 /*
@@ -345,8 +351,21 @@ var user1 = {
 };
 // Do not edit the code above.
 
-//Code Here
-
+users.push(
+  user1,
+  user2 = {
+    name: 'asdfaf',
+    email: 'asdfasdf@asdf.com',
+    passowrd: 'asdf;lkje;i',
+    username: 'asdfasdfe',
+  },
+  user3 = {
+    name: 'asdfaf',
+    email: 'asdfasdf@asdf.com',
+    passowrd: 'asdf;lkje;i',
+    username: 'asdfasdfe',
+  }, 
+)
 
 
 /*
@@ -359,7 +378,11 @@ var user1 = {
   Once you find the particular index he's located in, delete him from the array.
 */
 
-//Code Here
+for(let i = 0; i < users.length; i++) {
+if (users[i]['email'] === user1.email) {
+  users.splice(i,1);
+ }
+}
 
 
 
