@@ -242,9 +242,8 @@ for(var i = 0; i < num2; i++){
   Return the array which is longest.
 */
 
-longer = (arr1, arr2) => {
-  return arr1 > arr2 ? arr1 : arr2;
-}
+let longer = (arr1, arr2) => arr1.length > arr2.length ? arr1 : arr2;
+
 
 
 
@@ -267,6 +266,16 @@ both  = (arr1, arr2) => {
   }
   return newArray;
 }
+
+/* let both = (arr1, arr2) => {
+  let ans = [];
+  for(arr2.indexOf(arr1[i]) !== -1) {
+    ans.push(arr1[i])
+   }
+  }
+  return ans;
+}
+}*/ 
 
 
 ////////// PROBLEM 12 //////////
